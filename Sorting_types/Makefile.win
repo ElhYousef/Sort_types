@@ -1,0 +1,73 @@
+# Project: Project1
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe -D__DEBUG__
+CC       = gcc.exe -D__DEBUG__
+WINDRES  = windres.exe
+OBJ      = main.o get_array.o print_array.o do_InsertionSorting.o do_bubbleSorting.o do_selectionSorting.o do_quickSorting.o do_ShellSorting.o min.o max.o do_bucketSorting.o make_Buckets.o print_array2d.o gather_array.o make_Buckets_poinVer1.o make_Buckets_poinVer2.o
+LINKOBJ  = main.o get_array.o print_array.o do_InsertionSorting.o do_bubbleSorting.o do_selectionSorting.o do_quickSorting.o do_ShellSorting.o min.o max.o do_bucketSorting.o make_Buckets.o print_array2d.o gather_array.o make_Buckets_poinVer1.o make_Buckets_poinVer2.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -g3
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = Project1.exe
+CXXFLAGS = $(CXXINCS) -g3
+CFLAGS   = $(INCS) -g3
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.c
+	$(CC) -c main.c -o main.o $(CFLAGS)
+
+get_array.o: get_array.c
+	$(CC) -c get_array.c -o get_array.o $(CFLAGS)
+
+print_array.o: print_array.c
+	$(CC) -c print_array.c -o print_array.o $(CFLAGS)
+
+do_InsertionSorting.o: do_InsertionSorting.c
+	$(CC) -c do_InsertionSorting.c -o do_InsertionSorting.o $(CFLAGS)
+
+do_bubbleSorting.o: do_bubbleSorting.c
+	$(CC) -c do_bubbleSorting.c -o do_bubbleSorting.o $(CFLAGS)
+
+do_selectionSorting.o: do_selectionSorting.c
+	$(CC) -c do_selectionSorting.c -o do_selectionSorting.o $(CFLAGS)
+
+do_quickSorting.o: do_quickSorting.c
+	$(CC) -c do_quickSorting.c -o do_quickSorting.o $(CFLAGS)
+
+do_ShellSorting.o: do_ShellSorting.c
+	$(CC) -c do_ShellSorting.c -o do_ShellSorting.o $(CFLAGS)
+
+min.o: min.c
+	$(CC) -c min.c -o min.o $(CFLAGS)
+
+max.o: max.c
+	$(CC) -c max.c -o max.o $(CFLAGS)
+
+do_bucketSorting.o: do_bucketSorting.c
+	$(CC) -c do_bucketSorting.c -o do_bucketSorting.o $(CFLAGS)
+
+make_Buckets.o: make_Buckets.c
+	$(CC) -c make_Buckets.c -o make_Buckets.o $(CFLAGS)
+
+print_array2d.o: print_array2d.c
+	$(CC) -c print_array2d.c -o print_array2d.o $(CFLAGS)
+
+gather_array.o: gather_array.c
+	$(CC) -c gather_array.c -o gather_array.o $(CFLAGS)
+
+make_Buckets_poinVer1.o: make_Buckets_poinVer1.c
+	$(CC) -c make_Buckets_poinVer1.c -o make_Buckets_poinVer1.o $(CFLAGS)
+
+make_Buckets_poinVer2.o: make_Buckets_poinVer2.c
+	$(CC) -c make_Buckets_poinVer2.c -o make_Buckets_poinVer2.o $(CFLAGS)
